@@ -1,0 +1,68 @@
+.NavigationItem {
+    background-color: black;
+    font-weight: 700;
+    width: 100%;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.NavigationItem a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    color: white;
+    position: relative;
+
+}
+
+.NavigationItem a:hover,
+.NavigationItem a:active,
+.NavigationItem a.active {
+    background-color: black;
+    color: orangered;
+    box-shadow: 0 1px 10px 1px black;
+    transition: all 0.3s ease-in-out;
+}
+
+.NavigationItem a:hover:after,
+.NavigationItem a:active:after,
+.NavigationItem a.active:after {
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: 2px solid orangered;
+    width: 100%;
+    animation: underlineanimation 0.6s forwards;
+    box-sizing: border-box;
+}
+
+@media (min-width: 500px) {
+    .NavigationItem {
+        margin: 0;
+        height: 100%;
+        width: auto;
+        padding: 0 10px;
+        cursor: pointer;
+    }
+    
+    .NavigationItem a {
+        padding: 0 10px;
+    }
+}
+
+@keyframes underlineanimation {
+    from{
+        width: 0
+    }
+    to {
+        width: 100%;
+    }
+}

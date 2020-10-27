@@ -1,0 +1,48 @@
+.Button {
+    padding: 0 10px;
+    width: auto;
+    border-radius: 5px;
+    background: black;
+    color: white;
+    border: 1px solid #fff;
+    margin: 10px;
+    box-shadow: 0 0 5px 0 #fff;
+    outline-color: #fff;
+    display: flex;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Button svg {
+  margin-left: 12px;
+}
+
+.Button:hover {
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    border: 1px solid black;
+    box-shadow: 0 0 5px 0 #000;
+    transform: scale(1.2);
+    transition: all 0.2s ease-in-out;
+}
+
+.Animation svg{
+    animation-name: moveright;
+    animation-duration: 0.9s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+
+@media only screen and (min-width: 600px) {
+  .Button {
+    margin: 20px;
+  }
+}
+
+@keyframes moveright {
+    from {transform: scale(1)}
+  to {transform: scale(1.4)}
+}

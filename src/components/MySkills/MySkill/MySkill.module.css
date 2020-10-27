@@ -1,0 +1,44 @@
+.MySkillItem {
+    border: 1px solid #fff;
+    margin: 15px 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.MySkill {
+    background: orangered;
+    height: 30px;
+    display: flex;
+    line-height: 30px;
+    align-items: center;
+    width:0;
+    overflow:hidden;
+    margin-right: 5px;
+    height: 100%;
+    animation: animateWidth 1s 0.2s ease-in both;
+    border-radius: 5px;
+}
+
+.Heading {
+    color: #fff;
+    display: inline-block;
+    font-weight: 700;
+    background: #ff9067;
+    padding: 0px 20px;
+}
+
+@media only screen and (min-width: 600px) {
+    .MySkill {
+        margin-right: 10px;
+    }
+}
+
+@keyframes animateWidth {
+    0%{
+        max-width: 0;
+    }
+    100% {
+        max-width: 900px;
+    }
+}

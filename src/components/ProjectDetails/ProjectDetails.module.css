@@ -1,0 +1,52 @@
+.ProjectDetails {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+.Heading {
+    margin: 10px 0;
+}
+
+.ProjectDetails p {
+    margin: 10px 0;
+}
+
+.Duration {
+    margin-bottom: 10px;
+}
+
+.Duration span:first-of-type, .Label {
+    font-weight: 700;
+}
+
+.Technologies {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.ButtonSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.Link {
+    color: orangered;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.Link svg {
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.Link:hover {
+    transform: scale(1.2);
+    transition: all 0.4s linear;
+}

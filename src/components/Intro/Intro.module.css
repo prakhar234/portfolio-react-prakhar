@@ -1,0 +1,40 @@
+.Intro {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px 0;
+    letter-spacing: 0.1rem;
+}
+
+.Heading {
+    font-size: 18px;
+}
+
+.Highlight {
+    color: orangered;
+    /* animation: fade ease 1s; */
+
+}
+
+@media only screen and (min-width: 601px) {
+    .Intro {
+        font-size: 24px;
+    }
+    .Heading {
+        font-size: 26px;
+    }
+}
+
+/* 
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+} */

@@ -1,24 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from 'react';
+import { Switch, Route } from "react-router-dom";
+
+import styles from './App.module.css';
+import Loader from "./components/UI/Loader/Loader";
+
+const Home = React.lazy(() => {
+  return import("./containers/Home/Home");
+});
+
+const About = React.lazy(() => {
+  return import("./containers/About/About");
+});
+
+const Portfolio = React.lazy(() => {
+  return import("./containers/Portfolio/Portfolio");
+});
+
+const routes = (
+  <Switch>
+    <Route path="/" exact render={(props) => <Home {...props} />}></Route>
+    <Route path="/about" render={(props) => <About {...props} />}></Route>
+    <Route path="/portfolio" render={(props) => <Portfolio {...props} />}></Route>
+  </Switch>
+)
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.App}>
+      <Suspense fallback={<Loader />}>{routes}</Suspense>
     </div>
   );
 }

@@ -1,0 +1,14 @@
+.Portfolio {
+    color: white;
+    padding: 10px;
+}
+
+.FiltersContainer {
+    margin: 20px 0;
+}
+
+@media only screen and (min-width: 600px) {
+    .Portfolio {
+        padding: 20px;
+    }
+}
