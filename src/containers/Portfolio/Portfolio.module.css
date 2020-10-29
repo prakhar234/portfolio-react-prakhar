@@ -12,3 +12,16 @@
         padding: 20px;
     }
 }
+
+@media only screen and (min-width: 1024px) {
+    .Portfolio {
+        padding: 20px 60px;
+    }
+}
+
+@media only screen and (min-width: 1980px) {
+    .Portfolio {
+        padding: 20px 10%;
+    }
+}
+

@@ -12,7 +12,7 @@ const ProjectDetails = props => {
 
     let link = null;
     if(projectSummary.url) {
-        link = <a href={projectSummary.url} className={styles.Link} target="_blank">Check Application <FiExternalLink /></a>;
+        link = <a href={projectSummary.url} className={styles.Link} target="_blank" rel="noopener noreferrer">Check Application <FiExternalLink /></a>;
     }
     return (
         <React.Fragment>

@@ -18,7 +18,6 @@
     justify-content: center;
     align-items: center;
     flex-flow: column;
-
 }
 
 .ImgContainer {
@@ -31,7 +30,6 @@
     height: 100%;
     border-radius: 50%;
 }
-
 
 @media only screen and (min-width: 600px) {
     .About {
@@ -46,10 +44,18 @@
     .ImgContainer {
         width: 30%;
         height: auto;
+        max-width: 250px;
     }
+}
 
-    /* .ImgContainer img {
-        width: 300px;
-        height: 300px;
-    } */
+@media only screen and (min-width: 1024px) {
+    .About {
+        padding: 20px 60px;
+    }
+}
+
+@media only screen and (min-width: 1980px) {
+    .About {
+        padding: 20px 10%;
+    }
 }

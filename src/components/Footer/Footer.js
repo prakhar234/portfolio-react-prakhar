@@ -41,7 +41,7 @@ const Footer = () => {
 
     const socialLinks = links.map(link => {
         return (
-            <a key={link.id} className={styles.SocialLink} href={link.link} target="_blank">{LINKIMAGES[link.id]}</a>
+            <a key={link.id} className={styles.SocialLink} href={link.link} target="_blank" rel="noopener noreferrer">{LINKIMAGES[link.id]}</a>
         )
     })
 

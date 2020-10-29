@@ -16,7 +16,7 @@
     overflow:hidden;
     margin-right: 5px;
     height: 100%;
-    animation: animateWidth 1s 0.2s ease-in both;
+    animation: animateWidth 1s 1s ease-in both;
     border-radius: 5px;
 }
 

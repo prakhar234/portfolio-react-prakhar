@@ -17,7 +17,7 @@ const Home  = props => {
         setLoading(true);
         const timer = setTimeout(() => {
             setLoading(false);
-        },2000);
+        },1000);
 
         return () => {
             clearTimeout(timer);
