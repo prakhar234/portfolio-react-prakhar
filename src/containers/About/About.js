@@ -3,19 +3,21 @@ import {Slide} from 'react-awesome-reveal';
 import {Fade} from 'react-awesome-reveal';
 
 import Layout from "../../components/Layout/Layout";
-import Cards from "../../components/Cards/Cards";
+import Cards from "../../components/CharacterCards/CharacterCards";
+import CardList from "../../components/CardList/CardList";
 import styles from "./About.module.css";
 import MySkills from "../../components/MySkills/MySkills";
 import MyPhoto from "../../components/MyPhotos/MyPhoto/MyPhoto";
-import photo from "../../assets/images/mine-3.jpg";
+import photo from "../../assets/images/traveling.JPG";
 import axios from "../../shared/axios/axios";
 import Loader from "../../components/UI/Loader/Loader";
 
 const About  = () => {
     const [ developmentStyles, setDevelopmentStyles ] = useState(null);
-    const [mySkills, setMySkillsData] = useState(null);
-    const [isLoading, setLoading] = useState(false);
-    const [error, setError] = useState(false);
+    const [ mySkills, setMySkillsData ] = useState(null);
+    const [ myHobbies, setMyHobbies ] = useState(null);
+    const [ isLoading, setLoading ] = useState(false);
+    const [ error, setError ] = useState(false);
     const careerStartDate = new Date("09-01-2012");
     const today = new Date();
     let differenceInYears = today.getFullYear() - careerStartDate.getFullYear();
@@ -28,6 +30,7 @@ const About  = () => {
         axios.get('about.json').then(response => {
             setMySkillsData(response.data.mySkillsData);
             setDevelopmentStyles(response.data.developmentStyles);
+            setMyHobbies(response.data.hobbies);
             setLoading(false);
         }).catch(() => {
             setError("Due to technical issue, not able to access the data. Please try again later!!");
@@ -59,6 +62,13 @@ const About  = () => {
                         <MyPhoto classes={styles.ImgContainer} currentPhoto={photo}></MyPhoto>
                         <MySkills mySkills={mySkills}></MySkills>
                     </div>
+                    <Slide triggerOnce direction="left">
+                        <h1>Hobbies</h1>
+                    </Slide>
+                    <div className={styles.HobiesContainer}>
+                        <CardList cards = {myHobbies}></CardList>
+                    </div>
+
             </React.Fragment>
         )
     };

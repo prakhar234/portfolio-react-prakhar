@@ -10,9 +10,3 @@
     flex-flow: column;
     min-height: 100vh;
 }
-
-@media only screen and (min-width: 600px) {
-    .Content {
-        /* padding: 20px; */
-    }
-}

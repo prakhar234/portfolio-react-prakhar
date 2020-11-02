@@ -286,6 +286,66 @@
                 "description": "Websites don't have to be static, I love making pages come to life.",
                 "iconName": "IoIosRocket"
             }
+        ],
+        "education": [
+            {
+                "id": "graduation",
+                "name": "Bachelor of Technology, Computer Science and Engineering",
+                "completionYear": "2008 - 2012",
+                "place": "Delhi, India",
+                "university": "Guru Gobind Singh Indraprastha University"
+            },
+            {
+                "id": "inter",
+                "name": "Higher Secondary Education",
+                "completionYear": "2006 - 2007",
+                "place": "Unnao, Uttar Pradesh, India",
+                "university": "St. Lawrence School"
+            },
+            {
+                "id": "highschool",
+                "name": "Secondary School Certification",
+                "completionYear": "2004 - 2005",
+                "place": "Unnao, Uttar Pradesh, India",
+                "university": "St. Lawrence School"
+            }
+        ],
+        "hobbies": [
+            {
+                "id": "cricket",
+                "name": "Cricket",
+                "imgUrl": "/cricket.jpg"
+            },
+            {
+                "id": "traveling",
+                "name": "Traveling",
+                "imgUrl": "/traveling.JPG"
+            },
+            {
+                "id": "sports",
+                "name": "Adventurous Sports",
+                "imgUrl": "/sports.jpeg"
+            },
+            {
+                "id": "tabletenis",
+                "name": "Table Tenis",
+                "imgUrl": "/tabletenis.jpg"
+            },
+            {
+                "id": "football",
+                "name": "Football",
+                "imgUrl": "/football.jpg"
+            },
+            {
+                "id": "videogames",
+                "name": "Video Games",
+                "imgUrl": "/videogames.jpeg"
+            },
+            {
+                "id": "coding",
+                "name": "Coding",
+                "imgUrl": "/coding.jpeg"
+            }
         ]
     }
 }

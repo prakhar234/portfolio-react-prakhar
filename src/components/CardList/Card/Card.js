@@ -1,10 +1,10 @@
 import React from "react";
 import {Slide} from 'react-awesome-reveal';
 
-import styles from "./ProjectCard.module.css"
+import styles from "./Card.module.css"
 import Button from "../../UI/Button/Button";
 
-const ProjectCard = props => {
+const Card = props => {
 
     let backgroundImageStyles = null;
     if(props.imgUrl) {
@@ -12,16 +12,23 @@ const ProjectCard = props => {
             backgroundImage: `url(${props.imgUrl})`
         }
     }
+
+    let showDetailsButton = null;
+    if(props.showDetails) {
+        showDetailsButton = (
+            <Button type="button" clicked={props.showDetails} >
+                Details
+            </Button>
+        );
+    }
     
     return (
-        <Slide triggerOnce="true" direction="right" className={styles.ProjectCard}>
+        <Slide triggerOnce="true" direction="right" className={styles.Card}>
             <div>
                 <div className={styles.ImageContainer} style={backgroundImageStyles}></div>
                 <div className={styles.ContentContainer}>
                         <h3>{props.name}</h3>
-                        <Button type="button" clicked={props.showDetails} >
-                            Details
-                        </Button>
+                        {showDetailsButton}
                 </div>
             </div>
         </Slide>
@@ -29,4 +36,4 @@ const ProjectCard = props => {
     )
 };
 
-export default ProjectCard;
+export default Card;

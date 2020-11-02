@@ -17,16 +17,16 @@ const IMAGES = {
 }
 
 const Card =  props => {
-    const { cardData } = props;
+    const { characterCardData } = props;
     return (
         <Flip triggerOnce="true" direction="horizontal" className={styles.Card} cascade>
             <React.Fragment >
                 <div className={styles.ImageContainer}>
-                    {IMAGES[cardData.id]}
+                    {IMAGES[characterCardData.id]}
                 </div>
                 <div >
-                    <div className={styles.Title}>{cardData.name}</div>
-                    <div>{cardData.description}</div>
+                    <div className={styles.Title}>{characterCardData.name}</div>
+                    <div>{characterCardData.description}</div>
                 </div>
             </React.Fragment>
         </Flip>

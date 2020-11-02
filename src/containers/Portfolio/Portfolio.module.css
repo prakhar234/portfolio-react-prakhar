@@ -7,6 +7,11 @@
     margin: 20px 0;
 }
 
+.Highlight {
+    color: orangered;
+    font-weight: bold;
+}
+
 @media only screen and (min-width: 600px) {
     .Portfolio {
         padding: 20px;
@@ -19,9 +24,9 @@
     }
 }
 
-@media only screen and (min-width: 1980px) {
+@media only screen and (min-width: 1380px) {
     .Portfolio {
-        padding: 20px 10%;
+        padding: 20px 15%;
     }
 }
 

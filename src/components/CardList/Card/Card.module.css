@@ -1,4 +1,4 @@
-.ProjectCard {
+.Card {
     width: 100%;
     height: 300px;
     margin: 10px 0;
@@ -39,25 +39,25 @@
     bottom: -20px;
 }
 
-.ProjectCard:hover .ImageContainer {
+.Card:hover .ImageContainer {
     opacity: 0;
     transition: all 0.5s ease-in;
 }
 
-.ProjectCard:hover .ContentContainer h3 {
+.Card:hover .ContentContainer h3 {
     animation: slideInTop 0.6s both linear;
 }
-.ProjectCard:hover .ContentContainer button {
+.Card:hover .ContentContainer button {
     animation: slideInBottom 0.6s both linear;
 }
 
-.ProjectCard:hover .ContentContainer {
+.Card:hover .ContentContainer {
     opacity: 1;
     transition: all 0.5s ease-in;
 }
 
 @media only screen and (min-width: 600px) {
-    .ProjectCard {
+    .Card {
         width: 45%;
         height: 300px;
         margin: 15px;
@@ -65,7 +65,7 @@
 }
 
 @media only screen and (min-width: 940px) {
-    .ProjectCard {
+    .Card {
         width: 30%;
     }
 }
