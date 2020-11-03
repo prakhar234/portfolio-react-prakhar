@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {Slide} from 'react-awesome-reveal';
 import {Fade} from 'react-awesome-reveal';
+import { FaArrowRight } from 'react-icons/fa'
 
 import Layout from "../../components/Layout/Layout";
 import Cards from "../../components/CharacterCards/CharacterCards";
@@ -11,8 +12,9 @@ import MyPhoto from "../../components/MyPhotos/MyPhoto/MyPhoto";
 import photo from "../../assets/images/traveling.JPG";
 import axios from "../../shared/axios/axios";
 import Loader from "../../components/UI/Loader/Loader";
+import Button from "../../components/UI/Button/Button";
 
-const About  = () => {
+const About  = props => {
     const [ developmentStyles, setDevelopmentStyles ] = useState(null);
     const [ mySkills, setMySkillsData ] = useState(null);
     const [ myHobbies, setMyHobbies ] = useState(null);
@@ -36,7 +38,11 @@ const About  = () => {
             setError("Due to technical issue, not able to access the data. Please try again later!!");
             setLoading(false);
         })
-    }, [])
+    }, []);
+
+    const goToPortfolioPage = (url) => {
+        props.history.push(url);
+    }
 
     
     let aboutData = null;
@@ -68,6 +74,10 @@ const About  = () => {
                     <div className={styles.HobiesContainer}>
                         <CardList smallCard={true} cards = {myHobbies}></CardList>
                     </div>
+                    <Button type="button" includeSvgAnimation={true} clicked={() => goToPortfolioPage('/portfolio')}>
+                            Portfolio
+                            <FaArrowRight />
+                    </Button>
 
             </React.Fragment>
         )

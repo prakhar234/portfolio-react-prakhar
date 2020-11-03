@@ -3,6 +3,10 @@
     padding: 10px;
 }
 
+.PreventScroll {
+    overflow-y: hidden;
+}
+
 .FiltersContainer {
     margin: 20px 0;
 }

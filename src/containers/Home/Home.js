@@ -26,8 +26,8 @@ const Home  = props => {
 
     let pageComponents = <Loader />;
 
-    const goToPortfolioPage = () => {
-        props.history.push('/about');
+    const goToPortfolioPage = (url) => {
+        props.history.push(url);
     }
 
     if(!isLoading) {
@@ -35,10 +35,11 @@ const Home  = props => {
             <React.Fragment>
                 <MyPhotos />
                 <Intro />
-                <Button type="button" includeSvgAnimation={true} clicked={goToPortfolioPage}>
-                        More about me
+                <Button type="button" includeSvgAnimation={true} clicked={() => goToPortfolioPage('/portfolio')}>
+                        Portfolio
                         <FaArrowRight />
                 </Button>
+                
             </React.Fragment>
         )
     }

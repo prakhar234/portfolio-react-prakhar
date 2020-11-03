@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {Fade} from 'react-awesome-reveal';
+import { FaArrowRight } from 'react-icons/fa'
 
 import Layout from "../../components/Layout/Layout";
 import FilterList from "../../components/FilterList/FilterList";
@@ -9,8 +10,9 @@ import Modal from "../../components/UI/Modal/Modal";
 import ProjectDetails from "../../components/ProjectDetails/ProjectDetails";
 import axios from "../../shared/axios/axios";
 import Loader from "../../components/UI/Loader/Loader";
+import Button from "../../components/UI/Button/Button";
 
-const Portfolio  = () => {
+const Portfolio  = props => {
 
 
     const [filters, setFilters] = useState(null);
@@ -61,6 +63,10 @@ const Portfolio  = () => {
         setModalVisibility(false);
     }
 
+    const goToPortfolioPage = (url) => {
+        props.history.push(url);
+    }
+
     let portfolioData = null;
 
     if(isLoading) {
@@ -105,8 +111,19 @@ const Portfolio  = () => {
                 <div className={styles.FiltersContainer}>
                     <CardList showDetails={showDetails} cards = {projectList}></CardList>
                 </div>
+                <Button type="button" includeSvgAnimation={true} clicked={() => goToPortfolioPage('/about')}>
+                        More about me
+                        <FaArrowRight />
+                </Button>
             </React.Fragment>
         )
+    }
+
+    if(modalData) {
+        document.body.style.overflow = 'hidden';
+    } else {
+    document.body.style.overflow = 'unset';
+
     }
 
     return (
