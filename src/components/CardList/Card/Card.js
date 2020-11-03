@@ -21,10 +21,16 @@ const Card = props => {
             </Button>
         );
     }
+
+    const cardStyles = [styles.Card];
+
+    if(props.smallCard) {
+        cardStyles.push(styles.SmallCard);
+    }
     
     return (
-        <Slide triggerOnce="true" direction="right" className={styles.Card}>
-            <div>
+        <Slide triggerOnce="true" direction="up" className={cardStyles.join(' ')}>
+            <div className={styles.CardContainer}>
                 <div className={styles.ImageContainer} style={backgroundImageStyles}></div>
                 <div className={styles.ContentContainer}>
                         <h3>{props.name}</h3>

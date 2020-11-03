@@ -16,8 +16,11 @@
     overflow:hidden;
     margin-right: 5px;
     height: 100%;
-    animation: animateWidth 1s 1s ease-in both;
     border-radius: 5px;
+}
+
+.AnimateWidth {
+    animation: animateWidth 1s 0.1s ease-in both;
 }
 
 .Heading {

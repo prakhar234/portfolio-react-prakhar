@@ -10,6 +10,7 @@ const CardList = props => {
                     key={card.id} 
                     name={card.name}
                     imgUrl={card.imgUrl}
+                    smallCard={props.smallCard}
                     showDetails = {props.showDetails ? () => props.showDetails(card) : null}
                     />;
     });

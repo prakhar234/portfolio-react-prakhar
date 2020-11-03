@@ -66,7 +66,7 @@ const About  = () => {
                         <h1>Hobbies</h1>
                     </Slide>
                     <div className={styles.HobiesContainer}>
-                        <CardList cards = {myHobbies}></CardList>
+                        <CardList smallCard={true} cards = {myHobbies}></CardList>
                     </div>
 
             </React.Fragment>
