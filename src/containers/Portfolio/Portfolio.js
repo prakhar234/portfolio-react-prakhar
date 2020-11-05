@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import {Fade} from 'react-awesome-reveal';
 import { FaArrowRight } from 'react-icons/fa'
 
 import Layout from "../../components/Layout/Layout";
@@ -127,13 +126,11 @@ const Portfolio  = props => {
     }
 
     return (
-        <Fade cascade>
-            <Layout>
-                <div className={styles.Portfolio}>
-                    {portfolioData}
-                </div>
-            </Layout>
-        </Fade>
+        <Layout>
+            <div className={styles.Portfolio}>
+                {portfolioData}
+            </div>
+        </Layout>
     );
 };
 

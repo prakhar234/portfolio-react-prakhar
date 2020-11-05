@@ -19,18 +19,19 @@
 .SocialLink {
     width: 50px;
     height: 50px;
-    border: 1px solid orangered;
+    border: 1px solid #FF6433;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: orangered;
+    color: #FF6433;
     margin: 0 15px;
+    cursor: pointer;
 }
 
 .SocialLink:hover {
-    background-color: orangered;
+    background-color: #FF6433;
     color: white;
     transform: scale(1.2);
     transition: all 0.3s linear;
@@ -47,7 +48,12 @@
 }
 
 .Highlight {
-    color: orangered;
+    color: #FF6433;
+}
+
+.MailTo {
+    text-decoration: underline;
+    color: #FF6433;
 }
 
 @media only screen and (min-width: 600px) {

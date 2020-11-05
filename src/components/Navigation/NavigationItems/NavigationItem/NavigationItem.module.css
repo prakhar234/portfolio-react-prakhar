@@ -26,7 +26,7 @@
 .NavigationItem a:active,
 .NavigationItem a.active {
     background-color: black;
-    color: orangered;
+    color: #FF6433;
     box-shadow: 0 1px 10px 1px black;
     transition: all 0.3s ease-in-out;
 }
@@ -38,9 +38,9 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    border: 2px solid orangered;
+    border: 2px solid #FF6433;
     width: 100%;
-    animation: underlineanimation 0.6s forwards;
+    animation: underlineanimation 0.3s forwards;
     box-sizing: border-box;
 }
 

@@ -12,9 +12,9 @@
 }
 
 .Active {
-    background:rgb(226, 87, 36);
-    box-shadow: 0 1px 5px 0 rgb(226, 87, 36);
-    border-color: rgb(226, 87, 36);
+    background:#A82600;
+    box-shadow: 0 1px 5px 0 #A82600;
+    border-color: #A82600;
     transition: all 0.5s ease-in;
 }
 

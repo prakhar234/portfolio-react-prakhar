@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import {Zoom} from 'react-awesome-reveal';
 import { FaArrowRight } from 'react-icons/fa'
 
 
@@ -44,11 +43,9 @@ const Home  = props => {
         )
     }
     return (
-        <Zoom>
-            <div className={styles.Home}>
-                {pageComponents}
-            </div>
-        </Zoom>
+        <div className={styles.Home}>
+            {pageComponents}
+        </div>
     );
 };
 

@@ -39,9 +39,16 @@ const Footer = () => {
         }
     ];
 
+    const redirectToSocialSite = url => {
+        window.open(url);
+    }
+
     const socialLinks = links.map(link => {
         return (
-            <a key={link.id} className={styles.SocialLink} href={link.link} target="_blank" rel="noopener noreferrer">{LINKIMAGES[link.id]}</a>
+            <div
+                key={link.id} 
+                className={styles.SocialLink} 
+                onClick={() => redirectToSocialSite(link.link)}>{LINKIMAGES[link.id]}</div>
         )
     })
 
@@ -51,7 +58,7 @@ const Footer = () => {
                 {socialLinks}
             </div>
             <div className={styles.Contact}>
-                <div>Contact me <span className={styles.Highlight}>@prakhar234@gmail.com</span></div>
+                <div>Contact me<span className={styles.Highlight}>@ <a className={styles.MailTo} href="mailto:prakhar234@gmail.com">prakhar234@gmail.com</a></span></div>
             </div>
         </div>
     );

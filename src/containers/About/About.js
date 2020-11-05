@@ -84,14 +84,11 @@ const About  = props => {
     };
 
     return (
-        <Fade cascade>
-            <Layout>
-                <div className={styles.About}>
-                    {aboutData}
-                </div>
-            </Layout>
-        </Fade>
-        
+        <Layout>
+            <div className={styles.About}>
+                {aboutData}
+            </div>
+        </Layout>
     );
 };
 
