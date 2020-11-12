@@ -11,6 +11,8 @@ const CardList = props => {
                     name={card.name}
                     imgUrl={card.imgUrl}
                     smallCard={props.smallCard}
+                    showClientName={props.showClientName}
+                    clientName={card.clientName}
                     showDetails = {props.showDetails ? () => props.showDetails(card) : null}
                     />;
     });

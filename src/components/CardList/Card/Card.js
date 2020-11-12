@@ -1,5 +1,5 @@
 import React from "react";
-import {Slide} from 'react-awesome-reveal';
+import { Slide } from "react-awesome-reveal";
 
 import styles from "./Card.module.css"
 import Button from "../../UI/Button/Button";
@@ -22,6 +22,16 @@ const Card = props => {
         );
     }
 
+    let clientNameElement = null;
+
+    if(props.showClientName) {
+        clientNameElement = (
+            <div className={styles.ClientContainer}>
+                <div>{props.clientName}</div>
+            </div>
+        )
+    }
+
     const cardStyles = [styles.Card];
 
     if(props.smallCard) {
@@ -29,16 +39,18 @@ const Card = props => {
     }
     
     return (
-        <Slide triggerOnce="true" direction="up" className={cardStyles.join(' ')}>
+        <Slide direction="up" triggerOnce="true" className={cardStyles.join(' ')} >
+            <div >
             <div className={styles.CardContainer}>
                 <div className={styles.ImageContainer} style={backgroundImageStyles}></div>
                 <div className={styles.ContentContainer}>
-                        <h3>{props.name}</h3>
+                        <div className={styles.ContentHeading}>{props.name}</div>
                         {showDetailsButton}
                 </div>
             </div>
+            {clientNameElement}
+        </div>
         </Slide>
-    
     )
 };
 

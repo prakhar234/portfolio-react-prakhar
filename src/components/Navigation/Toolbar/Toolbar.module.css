@@ -1,5 +1,5 @@
 .Toolbar {
-    height: 56px;
+    height: 60px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -23,8 +23,8 @@
     font-weight: bold;
     text-transform: capitalize;
     text-decoration: none;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
 }
 

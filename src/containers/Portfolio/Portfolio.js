@@ -108,7 +108,11 @@ const Portfolio  = props => {
                     <FilterList filters={filters} setActiveFilter={handleFilterSelect}></FilterList>
                 </div>
                 <div className={styles.FiltersContainer}>
-                    <CardList showDetails={showDetails} cards = {projectList}></CardList>
+                    <CardList 
+                        showClientName={true} 
+                        showDetails={showDetails} 
+                        cards = {projectList}>
+                    </CardList>
                 </div>
                 <Button type="button" includeSvgAnimation={true} clicked={() => goToPortfolioPage('/about')}>
                         More about me

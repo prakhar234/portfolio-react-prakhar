@@ -1,6 +1,6 @@
 .Card {
     width: 100%;
-    height: 300px;
+    height: 250px;
     margin: 10px 0;
     display: flex;
     justify-content: center;
@@ -28,6 +28,20 @@
     background-position: center;
 }
 
+.ClientContainer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    background: #A82600;
+    align-items: center;
+    height: 40px;
+    font-weight: 700;
+    line-height: 1em;
+}
+
 .ContentContainer {
     display: flex;
     justify-content: center;
@@ -38,7 +52,7 @@
     width: 100%;
 }
 
-.ContentContainer h3 {
+.ContentHeading {
     position: absolute;
     top: -10px;
     margin: 0;
@@ -50,19 +64,29 @@
 
 .Card:hover .ImageContainer {
     opacity: 0;
-    transition: all 0.5s ease-in;
+    transition: all 0.3s ease-in;
 }
 
-.Card:hover .ContentContainer h3 {
-    animation: slideInTop 0.6s both linear;
+.Card:hover .ContentHeading {
+    animation: slideInTop 0.3s both ease-in;
 }
+
 .Card:hover .ContentContainer button {
-    animation: slideInBottom 0.6s both linear;
+    animation: slideInBottom 0.3s both ease-in;
 }
 
 .Card:hover .ContentContainer {
     opacity: 1;
-    transition: all 0.5s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+.ContentHeading {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.CardSlide {
+    animation: cardSlide 0.2s both ease-in;
 }
 
 @media only screen and (max-width: 600px) {
@@ -72,7 +96,7 @@
         margin: 5px;
     }
 
-    .SmallCard .ContentContainer h3 {
+    .SmallCard .ContentHeading {
         font-size: 12px;
     }
 }
@@ -80,7 +104,6 @@
 @media only screen and (min-width: 600px) {
     .Card {
         width: 45%;
-        height: 300px;
         margin: 15px;
     }
 }
@@ -101,6 +124,7 @@
         opacity: 1;
     }
 }
+
 @keyframes slideInBottom {
     from {
         bottom: -10px;
@@ -109,5 +133,14 @@
     to {
         opacity: 1;
         bottom: 30%;
+    }
+}
+
+@keyframes cardSlide {
+    from {
+        transform: translateY(100vh);
+    }
+    to {
+        transform: translateY(0);
     }
 }

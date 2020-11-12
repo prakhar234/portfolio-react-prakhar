@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import {Slide} from 'react-awesome-reveal';
-import {Fade} from 'react-awesome-reveal';
 import { FaArrowRight } from 'react-icons/fa'
 
 import Layout from "../../components/Layout/Layout";
