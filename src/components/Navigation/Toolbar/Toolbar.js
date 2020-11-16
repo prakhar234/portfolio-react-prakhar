@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import DrawerToggle from "../SideDrawer/DrawerToggle/DrawerToggle";
 import NavigationItems from "../NavigationItems/NavigationItems";
-import Logo from "../../../assets/images/mine-3.jpg";
+import Logo from "../../../assets/images/mine-mobile.jpg";
 import styles from "./Toolbar.module.css";
 
 const Toolbar = (props) => {
