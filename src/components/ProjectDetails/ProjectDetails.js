@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./ProjectDetails.module.css";
 import Button from "../UI/Button/Button";
-import { FiExternalLink } from 'react-icons/fi'
+import { ReactComponent as ExternalLink } from '../../assets/svgs/external-link.svg';
 
 const ProjectDetails = props => {
     const { projectSummary } = props;
@@ -12,7 +12,7 @@ const ProjectDetails = props => {
 
     let link = null;
     if(projectSummary.url) {
-        link = <a href={projectSummary.url} className={styles.Link} target="_blank" rel="noopener noreferrer">Check Application <FiExternalLink /></a>;
+        link = <a href={projectSummary.url} className={styles.Link} target="_blank" rel="noopener noreferrer">Check Application <ExternalLink /></a>;
     }
     return (
         <React.Fragment>

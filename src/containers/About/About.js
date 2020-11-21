@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {Slide} from 'react-awesome-reveal';
-import { FaArrowRight } from 'react-icons/fa'
+import { ReactComponent as RightArrow } from '../../assets/svgs/right-arrow.svg';
 
 import Layout from "../../components/Layout/Layout";
 import Cards from "../../components/CharacterCards/CharacterCards";
@@ -75,7 +75,7 @@ const About  = props => {
                     </div>
                     <Button type="button" includeSvgAnimation={true} clicked={() => goToPortfolioPage('/portfolio')}>
                             Portfolio
-                            <FaArrowRight />
+                            <RightArrow />
                     </Button>
 
             </React.Fragment>

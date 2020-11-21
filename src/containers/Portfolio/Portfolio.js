@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaArrowRight } from 'react-icons/fa'
+import { ReactComponent as RightArrow } from '../../assets/svgs/right-arrow.svg';
 
 import Layout from "../../components/Layout/Layout";
 import FilterList from "../../components/FilterList/FilterList";
@@ -12,7 +12,6 @@ import Loader from "../../components/UI/Loader/Loader";
 import Button from "../../components/UI/Button/Button";
 
 const Portfolio  = props => {
-
 
     const [filters, setFilters] = useState(null);
     const [projects, setProjects] = useState(null);
@@ -116,7 +115,7 @@ const Portfolio  = props => {
                 </div>
                 <Button type="button" includeSvgAnimation={true} clicked={() => goToPortfolioPage('/about')}>
                         More about me
-                        <FaArrowRight />
+                        <RightArrow />
                 </Button>
             </React.Fragment>
         )

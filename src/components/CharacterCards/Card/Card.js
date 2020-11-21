@@ -1,19 +1,19 @@
 import React from "react";
 import { Flip } from 'react-awesome-reveal';
 
-import { IoIosSpeedometer } from "react-icons/io";
-import { MdPhonelink } from "react-icons/md";
-import { GoLightBulb } from "react-icons/go";
-import { IoIosRocket } from "react-icons/io";
+import { ReactComponent as Speedometer } from "../../../assets/svgs/speedometer.svg";
+import { ReactComponent as Responsive } from "../../../assets/svgs/responsive.svg";
+import { ReactComponent as LightBulb } from "../../../assets/svgs/lightbulb.svg";
+import { ReactComponent as Rocket } from "../../../assets/svgs/rocket.svg";
 
 import styles from "./Card.module.css";
 
 
 const IMAGES = {
-    'fast': <IoIosSpeedometer />,
-    'responsive': <MdPhonelink />,
-    'intuitive': <GoLightBulb />,
-    'dynamic': <IoIosRocket />
+    'fast': <Speedometer />,
+    'responsive': <Responsive />,
+    'intuitive': <LightBulb />,
+    'dynamic': <Rocket />
 }
 
 const Card =  props => {

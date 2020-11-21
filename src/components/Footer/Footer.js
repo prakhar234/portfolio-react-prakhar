@@ -1,8 +1,8 @@
 import React from "react";
-import { FaFacebookF } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
+import { ReactComponent as Facebook } from "../../assets/svgs/facebook.svg";
+import { ReactComponent as Instagram } from "../../assets/svgs/instagram.svg";
+import { ReactComponent as LinkedIn } from "../../assets/svgs/linkedin.svg";
+import { ReactComponent as Twitter } from "../../assets/svgs/twitter.svg";
 
 
 import styles from "./Footer.module.css";
@@ -10,10 +10,10 @@ import styles from "./Footer.module.css";
 const Footer = () => {
 
     const LINKIMAGES = {
-        'facebook': <FaFacebookF/>,
-        'instagram': <FaInstagram />,
-        'linkedin': <FaLinkedinIn />,
-        'twitter': <FaTwitter />
+        'facebook': <Facebook/>,
+        'instagram': <Instagram />,
+        'linkedin': <LinkedIn />,
+        'twitter': <Twitter />
     }
 
     const links = [

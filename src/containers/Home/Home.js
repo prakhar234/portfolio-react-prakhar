@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaArrowRight } from 'react-icons/fa'
+import { ReactComponent as RightArrow } from '../../assets/svgs/right-arrow.svg';
 
 
 
@@ -36,7 +36,7 @@ const Home  = props => {
                 <Intro />
                 <Button type="button" includeSvgAnimation={true} clicked={() => goToPortfolioPage('/portfolio')}>
                         Portfolio
-                        <FaArrowRight />
+                        <RightArrow />
                 </Button>
                 
             </React.Fragment>
