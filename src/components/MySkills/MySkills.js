@@ -5,9 +5,9 @@ import MySkill from "./MySkill/MySkill";
 
 const MySkills =  props => {
     const { mySkills } = props;
-    let mySkillsList = mySkills.map(mySkill => {
+    let mySkillsList = mySkills.map((mySkill, ind) => {
         return (
-            <MySkill mySkill={mySkill} key={mySkill.name}></MySkill>
+            <MySkill mySkill={mySkill} key={ind}></MySkill>
         )
     })
     return (

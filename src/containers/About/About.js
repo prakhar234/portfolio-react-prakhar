@@ -21,7 +21,11 @@ const About  = props => {
     const [ error, setError ] = useState(false);
     const careerStartDate = new Date("09-01-2012");
     const today = new Date();
-    const differenceInYears = today.getFullYear() - careerStartDate.getFullYear();
+    const isMonthEqualOrGreater = careerStartDate.getMonth() > today.getMonth();
+    console.log(careerStartDate.getMonth(), today.getMonth(), isMonthEqualOrGreater);
+
+
+    const differenceInYears = isMonthEqualOrGreater ? today.getFullYear() - careerStartDate.getFullYear() - 1 : today.getFullYear() - careerStartDate.getFullYear();
     const differenceInMonths = differenceInYears * 12 + (today.getMonth() - careerStartDate.getMonth());
     const experienceInMonthAndYears = differenceInYears + " years and " + (differenceInMonths % 12) + " month(s) experience";
     const [experience ] = useState(experienceInMonthAndYears);
