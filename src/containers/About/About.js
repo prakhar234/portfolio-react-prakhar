@@ -56,7 +56,7 @@ const About  = props => {
         aboutData = (
             <React.Fragment>
                     <h1>About</h1>
-                    <div className={styles.SubHeading}>I am a front end developer with {experience} at <span className={styles.Highlight}>Deloitte</span> based in <span className={styles.Highlight}>Amsterdam, Netherlands.</span></div>
+                    <div className={styles.SubHeading}>I am a Technical software engineering lead with {experience} at <span className={styles.Highlight}>Verifone</span> based in <span className={styles.Highlight}>Utrecht, Netherlands.</span></div>
                     <div className="">I enjoy turning complex problems into simple, beautiful and intuitive designs. When I'm not coding, or pushing pixels, you'll find me playing games (either outside or on my pS4), travelling or trying adventurous sports.</div>
                     <div>Person you are looking at was born on <span className={styles.Highlight}>17th September, 1989</span></div>
                     <Cards characteristics = {developmentStyles} />
